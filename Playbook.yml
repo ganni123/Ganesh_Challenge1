@@ -1,0 +1,10 @@
+Deploy.yml
+- host: appserver
+  task:
+    - name: Copy files to remote host
+      copy:
+        src: /home/Desktop/WS/dist/
+        dest: /var/www/html
+        owner: ganesh
+        group: ganesh
+        mode: 0755
